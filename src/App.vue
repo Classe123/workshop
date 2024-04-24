@@ -1,14 +1,28 @@
 <template>
-  <h1 class="text-center">Ciao</h1>
-  <i class="fa fa-solid fa-home"></i>
+  <header>
+    <h1 class="text-center">Workshop</h1>
+  </header>
+  <main>
+    <ColorsList />
+  </main>
 </template>
 
 <script>
-  export default {
-    name: 'App'
+import { store } from './store.js';
+import ColorsList from './components/ColorsList.vue';
+
+export default {
+  name: 'App',
+  components: {
+    ColorsList
+
+  },
+  data() {
+    return {
+      store
+    }
   }
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
